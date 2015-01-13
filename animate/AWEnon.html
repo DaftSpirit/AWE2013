@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name ="keywords" content="Projet,CV">
+        <meta name="author" content="Fabien BELLEGO">
+        <link rel="stylesheet" media="all" href="style.css" />
+        
+        <title>Accueil</title>
+    </head>
+
+    <body>
+        <div id="bloc_page">
+        <canvas id="canvas" width="300" height="300">
+            Vous ne pouvez pas profiter à cause de votre navigateur.
+        </canvas>  
+        </div>
+        <script type="text/javascript">
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+
+            var myInterval = setInterval(animate, 1000/60); //boucle de rafraichissement
+            var xposmin = 42;
+            var xposmax = 200;
+            var sens = 3;
+            var xpos = 50;
+            var ypos =150;
+
+            function animate() //animation du "non"
+            {
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+
+                ctx.beginPath(); 
+
+                //bras de droite utiliser des fonctions pour différencier les différents champs de dessins, afin d'en replir certains mais pas tous, une fonction pour les bras, une autre pour les faces, une dernière pour le visage
+                ctx.moveTo((xpos/2)+365,ypos+100);
+                ctx.lineTo((xpos/2)+485,ypos+150);
+                ctx.lineTo((xpos/2)+520,ypos+285);
+
+                //bras de gauche
+                ctx.moveTo((xpos/2)+65,ypos+100);
+                ctx.lineTo((xpos/2)-5,ypos+150);
+                ctx.lineTo((xpos/2)-20,ypos+285);
+
+                //face avant du cube
+                ctx.moveTo(xpos,ypos);
+                ctx.lineTo(xpos+300,ypos);
+                ctx.lineTo(xpos+300,ypos+300);
+                ctx.lineTo(xpos,ypos+300);
+                ctx.lineTo(xpos,ypos);
+
+                if(xpos<=125) //cotés du cube qui vont s'afficher de façon alternative
+                {
+                    //face de droite
+                    ctx.moveTo(425,100);
+                    ctx.lineTo(425,350);
+                    ctx.lineTo(xpos+300,ypos+300);
+                    ctx.lineTo(xpos+300,ypos);
+                }
+                else
+                {
+                    //face de gauche
+                    ctx.moveTo(125,100); 
+                    ctx.lineTo(125,350);
+                    ctx.lineTo(xpos,ypos+300);
+                    ctx.lineTo(xpos,ypos);
+                }
+
+                ctx.moveTo(xpos,ypos); //face du dessus
+                ctx.lineTo(125,100);
+                ctx.lineTo(425,100);
+                ctx.lineTo(xpos+300,ypos);
+                
+                /*//smiley qui souri
+                ctx.moveTo(xpos+75,ypos+200); 
+                ctx.lineTo(xpos+100,ypos+225);
+                ctx.lineTo(xpos+200,ypos+225);
+                ctx.lineTo(xpos+225,ypos+200);*/
+                
+                //smiley pas content
+                ctx.moveTo(xpos+75,ypos+250); 
+                ctx.lineTo(xpos+100,ypos+225); 
+                ctx.lineTo(xpos+200,ypos+225);
+                ctx.lineTo(xpos+225,ypos+250);
+                
+                //oeil droit
+                ctx.moveTo(xpos+240,ypos+75); 
+                ctx.lineTo(xpos+215,ypos+50);
+                ctx.lineTo(xpos+190,ypos+75);
+                ctx.lineTo(xpos+215,ypos+100);
+
+                //oeil gauche
+                ctx.moveTo(xpos+60,ypos+75); 
+                ctx.lineTo(xpos+85,ypos+50);
+                ctx.lineTo(xpos+110,ypos+75);
+                ctx.lineTo(xpos+85,ypos+100);
+
+                ctx.closePath();
+                ctx.lineJoin = "round";
+                ctx.lineCap = "round";
+                ctx.fillStyle = "peru";
+                ctx.strokeStyle = "sienna";
+                ctx.lineWidth = 5;
+                ctx.fill();
+                ctx.stroke();
+                /*ctx.fillStyle = "lightblue";
+                ctx.fillRect(xpos,ypos,50,50); C'est le test !!!*/
+
+
+                if(xpos>=xposmax || xpos<=xposmin)
+                {
+                    sens *= -1;
+                }
+
+                xpos += sens;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+/*Elements principaux de la page*/
+
+body
+{
+	background-color: rgba(0,50,255,0.7);
+}
+
+#bloc_page
+{
+	width: 1100px;
+	margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+/*Header*/
+
+header
+{
+	background-color: rgba(0,100,255,1);
+	border-bottom: 5px solid #760001;
+	margin-bottom: 15px;
+}
+
+#titre_principal
+{
+	display: inline-block;
+}
+
+header h1
+{
+	display: inline-block;
+	font-size: 2.8em;
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+#logo
+{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
+
+header h2
+{
+	font-size: 1.8em;
+	margin-top: 0px;
+	margin-left: 25px;
+	font-weight: normal;
+}
+
+#connexion
+{
+	display: inline-block;
+	width: 750px;
+	text-align: right;
+	vertical-align: top;
+}
+
+/*Navigation*/
+
+nav
+{
+	display: inline-block;
+	width: 750px;
+	text-align: right;
+}
+
+nav ul
+{
+	list-style-type: none;
+}
+
+nav li
+{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+nav a
+{
+	font-size: 1.6em;
+	color: #181818;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover
+{
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+/*Coprs*/
+
+article
+{
+	display: inline-block;
+	vertical-align: center;
+	text-align: left;
+	width: 750px;
+	border: 3px black groove;
+	border-radius: 2%;
+	padding: 5px;
+	height: 700px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+article h1
+{
+	text-align: center;
+	font-size: 1.3em;
+}
+
+article #logo
+{
+	float: left;
+	position: relative;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+aside h1
+{
+	text-align: center;
+}
+
+aside
+{
+	display: inline-block;
+	position: absolute;
+	background: rgba(0,0,0,0.2);
+	width: 250px;
+	box-shadow: 0px 3px 10px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1em;
+	height: 500px;
+	overflow: auto;
+}
+
+/*Footer*/
+
+footer
+{
+	background-color: rgba(0,100,255,1);
+	padding-top: 10px;
+	margin-top: 15px;
+	font-size: 1em;
+}
+
+footer h1
+{
+	font-size: 1.2em;
+	width: 150px;
+	border-bottom: 2px rgba(200,0,0,0.7) groove;
+}
+
+#ecole, #projet, #membres
+{
+	display: inline-block;
+	width: 350px;
+	height: 200px;
+	padding: 5px;
+	vertical-align: top;
+}
+
+#ecole
+{
+	border-right: 5px rgba(200,0,0,0.7) groove;
+}
+
+#membres
+{
+	border-left: 5px rgba(150,0,0,0.7) groove;
+}
+
+#script
+{
+	margin-left:225px;
+	margin-right:225px;
+}
+
