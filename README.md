@@ -15,3 +15,6 @@ AWE includes some features to have a sort of conversation with it
 * Awe knows the movie theatres of Mulhouse
 
 AWE is here to help you ! be kind with it ! =)
+
+
+<p>copyright Paul Bourgeois, Jérôme Gries, Fabien Bellego and Joris Rat 2014 all rights reserved</p>
