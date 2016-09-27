@@ -20,8 +20,8 @@ catch(Exception $e)
 }
 
 $req= $connexion->prepare('INSERT INTO user(pseudo,password,mail,name,adress) VALUES(:pseudo,:mdp,:email,:name,:adress)');
-
-$req->execute(array('pseudo'=>$_POST['pseudo'],'mdp'=>$_POST['mdp'],'email'=>$_POST['email'],'name'=>$_POST['name'],'adress'=>$_POST['adress']));
+$passhache = sha1($_POST['mdp']);
+$req->execute(array('pseudo'=>$_POST['pseudo'],'mdp'=>$passhache,'email'=>$_POST['email'],'name'=>$_POST['name'],'adress'=>$_POST['adress']));
 
 	header('Location:index.php?page=premiereco');
 ?>
