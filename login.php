@@ -23,7 +23,7 @@ if (empty($_SESSION['id'])) //les membres connectes ne peuvent pas s'inscrire
             $passhache = sha1($_POST['pass']);
  
             /* on verifie qu'un membre a bien ce pseudo et ce mot de passe*/
-            $req = $bdd->prepare('SELECT * FROM user WHERE pseudo = \''.$_POST['pseudo'].'\' AND password= \''.$_POST['pass'].'\' ');
+            $req = $bdd->prepare('SELECT * FROM user WHERE pseudo = \''.$_POST['pseudo'].'\' AND password= \''.$passhache.'\' ');
 			$req->execute(array('pseudo'=> $_POST['pseudo'], 'password'=> $_POST['pass']));
 			$resultat=$req->fetch();
  
