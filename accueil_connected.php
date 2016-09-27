@@ -12,6 +12,7 @@
 						<textarea name="message" rows="10" cols="70"></textarea></br>
 						<input type="submit" value="Envoyer"/></br>
 						</fieldset>
+		    </form>
                     <script type="text/javascript" src="js/AWEoui.js"></script>
                 </article>
                 <aside>
