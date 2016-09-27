@@ -32,6 +32,7 @@
 				}
 			}
 		}
+		header('location:index.php?page=accueil_not_found');
 		//header('location:index.php');
 	}
 	else
