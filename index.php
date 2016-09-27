@@ -23,6 +23,10 @@
 			include('accueil_connected.php');
 			break;
 			
+			case 'accueil_not_found':
+			include('accueil_not_found.php');
+			break;
+				
 			case 'premiereco':
 			include('premiereco.php');
 			break;
