@@ -1,13 +1,5 @@
 <?php
 	include('header.php');
-	
-	if(isset($_GET['message'])
-	{
-		$message=$_GET['message'];
-		/* TODO
-		select all interests of this category and present them to user
-		*/
-	}
 
 	if(isset($_GET['page']))
 	{
